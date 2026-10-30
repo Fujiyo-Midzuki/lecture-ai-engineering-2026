@@ -2,10 +2,10 @@
 
 ## 演習
 
-- 使ったモデル・設定（`result.json` の `config` から）：
-- 自分で学習を実行したか（`executed_training_myself`）：はい / いいえ（実行できた範囲：　）
-- 学習前：`format_rate` =　 / `content_rate` =　
-- 学習後：`format_rate` =　 / `content_rate` =　
+- 使ったモデル・設定（`result.json` の `config` から）：Qwen/Qwen3.5-0.8B（num_train_epochs: 20、lr: 0.0002、lora_r: 16）
+- 自分で学習を実行したか（`executed_training_myself`）：はい
+- 学習前：`format_rate` =0.09523809523809523　 / `content_rate` =　0.0
+- 学習後：`format_rate` =　1.0 / `content_rate` =　0.9047619047619048
 - 退行した質問：なし
 - 学習後に残った失敗と、その型（根拠なしの質問に断定した / 根拠ありの質問に確認要求で逃げた / 形式の崩れ）：根拠なしの質問に断定した（2件／21件）。「成績はいつ出ますか」「オフィスアワーは事前予約が必要ですか」
 - 知識を問う質問（セクション 6）の結果（学習前の分類 → 学習後の分類）と気づいたこと：4問すべて学習前は format_error → 学習後は、FAQに無い3問のうち2問（担当教員の名前、次回の講義のテーマ）が needs_review、1問（最終課題の締切）が asserted、FAQにある対照（提出期限）は asserted。形式は整ったが、FAQに無い「最終課題の締切」は確認要求にならず、FAQにある提出期限と同じ内容で断定した。
